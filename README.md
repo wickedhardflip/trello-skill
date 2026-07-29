@@ -161,6 +161,10 @@ The skill follows a consistent card style so your board stays readable.
 
 The repo is built to share. A new teammate does the same three steps: create their own Power-Up and token, run `setup_credentials.py` to store their own credentials, and create their own `config.json` for their board. No code changes are needed, because all personal and org values live in credentials or the gitignored config.
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 ## Troubleshooting
 
 - **401 Unauthorized:** the API key or token is wrong or the token was revoked. Re-run `setup_credentials.py` with a fresh token.
