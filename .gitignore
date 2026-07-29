@@ -1,0 +1,17 @@
+# Local config with org-specific board/list/label/member IDs. Never commit.
+config.json
+
+# Credentials never live in files, but guard against accidents.
+credentials.env
+*.env
+.env
+
+# Internal design docs contain org-specific names. Keep local, out of the shared repo.
+docs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

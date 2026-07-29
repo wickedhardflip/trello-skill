@@ -1,0 +1,13 @@
+{
+  "_comment": "Copy this file to config.json and fill in your own IDs. config.json is gitignored and must never be committed. Find your IDs with: python trello_client.py whoami | boards | lists <board_id> | labels <board_id>",
+  "board_id": "YOUR_BOARD_ID",
+  "member_id": "YOUR_TRELLO_MEMBER_ID",
+  "lists": {
+    "Backlog": "YOUR_LIST_ID",
+    "In Progress": "YOUR_LIST_ID",
+    "Done": "YOUR_LIST_ID"
+  },
+  "labels": {
+    "Example Label": "YOUR_LABEL_ID"
+  }
+}
