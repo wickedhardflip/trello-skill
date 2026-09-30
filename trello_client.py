@@ -137,6 +137,20 @@ def add_comment(card_id, text):
     return resp.json()
 
 
+def set_check_item(card_id, check_item_id, state):
+    """Tick or untick a checklist item. state is 'complete' or 'incomplete'.
+
+    Note the endpoint hangs off the CARD, not the checklist: the checklist id is
+    not part of the path. Both ids come from get_card(..., checklists='all').
+    """
+    if state not in ("complete", "incomplete"):
+        raise ValueError("state must be 'complete' or 'incomplete'")
+    resp = requests.put(f"{BASE_URL}/cards/{card_id}/checkItem/{check_item_id}",
+                        params={**_auth_params(), "state": state})
+    resp.raise_for_status()
+    return resp.json()
+
+
 def update_comment(action_id, text):
     """Rewrite an existing comment in place.
 
