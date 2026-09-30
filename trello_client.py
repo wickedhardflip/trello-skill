@@ -137,6 +137,20 @@ def add_comment(card_id, text):
     return resp.json()
 
 
+def update_comment(action_id, text):
+    """Rewrite an existing comment in place.
+
+    action_id is the comment's own id, the 'id' of an entry returned by
+    get_card_comments (NOT the card id). Trello keeps no history of the previous
+    text, so the old wording is gone once this returns: read the comment first
+    and be sure the replacement is complete, not a fragment.
+    """
+    resp = requests.put(f"{BASE_URL}/actions/{action_id}/text",
+                        params={**_auth_params(), "value": text})
+    resp.raise_for_status()
+    return resp.json()
+
+
 def update_card(card_id, **fields):
     """Update card fields, e.g. name='...', desc='...', idList='...'."""
     resp = requests.put(f"{BASE_URL}/cards/{card_id}",
