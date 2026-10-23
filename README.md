@@ -1,3 +1,5 @@
+> **Moved 2026-10-23.** This code now lives in the private repo TheGemGroupInc/itops-skills, folder `trello`. This repo is archived and kept for history only.
+
 # Trello Skill
 
 A Claude Code skill that reads and writes Trello cards directly through the Trello REST API. Instead of drafting card text for you to copy and paste, Claude can create cards from a standard template, list your assigned cards, suggest labels, and read or update existing cards, all from inside a session.
